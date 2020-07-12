@@ -67,7 +67,7 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           console.log(byType);
           console.log(byStatus);
-          console.log(byType('allergy));
+          console.log(byType('allergy'));
             
           
           console.log(byStatus('active'));
