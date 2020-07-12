@@ -77,7 +77,7 @@
           all.allergyCategory=allergy[0].category;
           all.status=allergy[0].status;
           if(allergy[0].reaction && allergy[0].reaction.length) {
-              all.reactions=allergy[0].reaction[0].manifestation[0];
+              all.reactions=allergy[0].reaction[0].manifestation[0].text;
             }
           all.criticality=allergy[0].criticality;
           }
