@@ -21,7 +21,7 @@
                       }
                     }
                   });
-var allergy = smart.patient.api.fetchAll({
+         var allergy = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerance',
                     query: {
                       code: {
