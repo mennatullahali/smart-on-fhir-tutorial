@@ -27,7 +27,7 @@ var allergy = smart.patient.api.fetchAll({
                   });
         $.when(pt, obv, allergy).fail(onError);
 
-        $.when(pt, obv,allergy).done(function(patient, obv) {
+        $.when(pt, obv,allergy).done(function(patient, obv, allergy) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
