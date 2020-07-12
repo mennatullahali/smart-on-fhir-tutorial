@@ -70,13 +70,17 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           
           var all=defaultAllergy();
+          if(allergy.length>0){
           all.allergy=allergy[0].substance.text;
           all.allergyType=allergy[0].type;
           all.allergyCategory=allergy[0].category;
           all.status=allergy[0].status;
-          all.reactions=allergy[0].reactions;
+          all.reactions='';
+            for(let i=0;i<allallergy[0].reactions.length;i++){
+              all.reactions+=allergy[0].reactions[i].text+ ','
+            }
           all.criticality=allergy[0].criticality;
-
+          }
           console.log('all',all);
           ret.resolve(p,all);
         });
