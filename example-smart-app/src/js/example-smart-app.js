@@ -22,8 +22,12 @@
                     }
                   });
 var allergy = smart.patient.api.fetchAll({
-                    type: 'AllergyIntolerance'
-                    
+                    type: 'AllergyIntolerance',
+                    query: {
+                      code: {
+                        $or: ['http://snomed.info/sct']
+                      }
+                    }
                   });
         $.when(pt, obv, allergy).fail(onError);
 
