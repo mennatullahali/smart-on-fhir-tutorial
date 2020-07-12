@@ -70,7 +70,6 @@
             
           
           console.log(byStatus('active'));
-          
          console.log(byObsStatus('final'));
 
           ret.resolve(p);
