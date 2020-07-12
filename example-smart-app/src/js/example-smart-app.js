@@ -108,7 +108,7 @@
       allergy: {value: ''},
       criticality: {value: ''},
       reactions: {value: ''},
-      birthdate: {value: ''},
+      status: {value: ''},
       allergyCategory: {value: ''},
       allergyType: {value: ''}
     };
