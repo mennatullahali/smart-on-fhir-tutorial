@@ -22,12 +22,7 @@
                     }
                   });
          var allergy = smart.patient.api.fetchAll({
-                    type: 'AllergyIntolerance',
-                    query: {
-                      code: {
-                        $or: ['http://snomed.info/sct|']
-                      }
-                    }
+                    type: 'AllergyIntolerance'
                   });
         $.when(pt, obv, allergy).fail(onError);
 
@@ -35,7 +30,7 @@
           console.log(allergy);
           console.log(obv);
           var byCodes = smart.byCodes(obv, 'code');
-          var byCodes2=smart.byCodes(allergy,'code');
+           var byStatus = smart.byCodes(allergy, 'status');
           var gender = patient.gender;
 
           var fname = '';
@@ -70,8 +65,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           
-          p.allerg
-          console.log(byCodes2('890733'));
+          console.log(byStatus('active'));
 
           ret.resolve(p);
         });
