@@ -68,11 +68,6 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
-          console.log(byType('allergy'));
-            
-          
-          console.log(byStatus('active'));
-         console.log(byObsStatus('final'));
           
           var all;
           all.allergy=allergy[0].substance.text;
@@ -82,6 +77,7 @@
           all.reactions=allergy[0].reactions;
           all.criticality=allergy[0].criticality;
 
+          console.log('all',all);
           ret.resolve(p,all);
         });
       } else {
