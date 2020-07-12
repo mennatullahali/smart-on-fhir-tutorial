@@ -76,8 +76,8 @@
           all.allergyCategory=allergy[0].category;
           all.status=allergy[0].status;
           all.reactions='';
-            for(let i=0;i<allallergy[0].reactions.length;i++){
-              all.reactions+=allergy[0].reactions[i].text+ ','
+          if(allergy[0].reaction && allergy[0].reaction.length) {
+              all.reactions+=allergy[0].reaction[i].manifestation[0];
             }
           all.criticality=allergy[0].criticality;
           }
