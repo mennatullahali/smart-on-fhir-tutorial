@@ -31,6 +31,7 @@
           console.log(obv);
           var byCodes = smart.byCodes(obv, 'code');
            var byStatus = smart.byCodes(allergy, 'status');
+          var byType = smart.byCodes(allergy, 'type');
           var gender = patient.gender;
 
           var fname = '';
@@ -64,6 +65,10 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
+          console.log(byType);
+          console.log(byStatus);
+          console.log(byType('allergy));
+            
           
           console.log(byStatus('active'));
 
