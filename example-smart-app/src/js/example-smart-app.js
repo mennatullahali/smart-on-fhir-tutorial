@@ -30,6 +30,7 @@
           console.log(allergy);
           console.log(obv);
           var byCodes = smart.byCodes(obv, 'code');
+           var byObsStatus = smart.byCodes(obv, 'status');
            var byStatus = smart.byCodes(allergy, 'status');
           var byType = smart.byCodes(allergy, 'type');
           var gender = patient.gender;
@@ -70,8 +71,7 @@
           
           console.log(byStatus('active'));
           
-          console.log(byType);
-          console.log(byStatus);
+         console.log(byObsStatus('final');
 
           ret.resolve(p);
         });
