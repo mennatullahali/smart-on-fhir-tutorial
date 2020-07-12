@@ -31,6 +31,8 @@
           console.log(obv);
           var byCodes = smart.byCodes(obv, 'code');
            var byObsStatus = smart.byCodes(obv, 'status');
+          const statusMap=smart.byCode(obv,'status');
+          console.log(statusMap);
            var byStatus = smart.byCodes(allergy, 'status');
           var byType = smart.byCodes(allergy, 'type');
           var gender = patient.gender;
