@@ -25,7 +25,7 @@
                     type: 'AllergyIntolerance',
                     query: {
                       code: {
-                        $or: ['http://snomed.info/sct']
+                        $or: ['http://snomed.info/sct|']
                       }
                     }
                   });
@@ -69,7 +69,9 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
-          console.log(byCodes2('271807003'));
+          
+          p.allerg
+          console.log(byCodes2('890733'));
 
           ret.resolve(p);
         });
