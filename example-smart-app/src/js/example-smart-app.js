@@ -69,6 +69,9 @@
             
           
           console.log(byStatus('active'));
+          
+          console.log(byType);
+          console.log(byStatus);
 
           ret.resolve(p);
         });
