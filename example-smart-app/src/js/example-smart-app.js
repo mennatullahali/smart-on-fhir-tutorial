@@ -21,10 +21,13 @@
                       }
                     }
                   });
+var allergy = smart.patient.api.fetchAll({
+                    type: 'AllergyIntolerance'
+                    }
+                  });
+        $.when(pt, obv, allergy).fail(onError);
 
-        $.when(pt, obv).fail(onError);
-
-        $.when(pt, obv).done(function(patient, obv) {
+        $.when(pt, obv,allergy).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
