@@ -69,7 +69,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           
-          var all;
+          var all=defaultAllergy();
           all.allergy=allergy[0].substance.text;
           all.allergyType=allergy[0].type;
           all.allergyCategory=allergy[0].category;
@@ -101,6 +101,16 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''}
+    };
+  }
+  function defaultAllergy(){
+    return {
+      allergy: {value: ''},
+      criticality: {value: ''},
+      reactions: {value: ''},
+      birthdate: {value: ''},
+      allergyCategory: {value: ''},
+      allergyType: {value: ''}
     };
   }
 
