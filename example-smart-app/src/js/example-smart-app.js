@@ -69,6 +69,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           
+          
           var all=defaultAllergy();
           if(allergy.length>0){
           all.allergy=allergy[0].substance.text;
