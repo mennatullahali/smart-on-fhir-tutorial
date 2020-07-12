@@ -73,8 +73,16 @@
           
           console.log(byStatus('active'));
          console.log(byObsStatus('final'));
+          
+          var all;
+          all.allergy=allergy[0].substance.text;
+          all.allergyType=allergy[0].type;
+          all.allergyCategory=allergy[0].category;
+          all.status=allergy[0].status;
+          all.reactions=allergy[0].reactions;
+          all.criticality=allergy[0].criticality;
 
-          ret.resolve(p);
+          ret.resolve(p,all);
         });
       } else {
         onError();
@@ -96,7 +104,7 @@
       systolicbp: {value: ''},
       diastolicbp: {value: ''},
       ldl: {value: ''},
-      hdl: {value: ''},
+      hdl: {value: ''}
     };
   }
 
@@ -128,7 +136,7 @@
     }
   }
 
-  window.drawVisualization = function(p) {
+  window.drawVisualization = function(p,all) {
     $('#holder').show();
     $('#loading').hide();
     $('#fname').html(p.fname);
@@ -140,6 +148,12 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+    $('#allergy').html(all.allergy);
+   $('#allergyType').html(all.allergyType);
+    $('#allergyCategory').html(all.allergyCategory);
+    $('#status').html(all.status);
+    $('#criticality').html(all.criticality);
+     $('#reactions').html(all.reactions);
   };
 
 })(window);
