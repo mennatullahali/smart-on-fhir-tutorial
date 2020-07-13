@@ -24,7 +24,7 @@
          var allergy = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerance'
                   });
-        var patients=smart.search({
+        var patients=smart.request({
           type: 'Patient',
           query:{
             gender:'female'
