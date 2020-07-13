@@ -24,15 +24,7 @@
          var allergy = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerance'
                   });
-        var patients=smart.request({
-          type: 'Patient',
-          query:{
-            gender:'female'
-          }
-        });
-        $.when(patients).done(function(patients){
-                              console.log('Patients',patients);
-                              });
+       
         $.when(pt, obv, allergy).fail(onError);
 
         $.when(pt, obv,allergy).done(function(patient, obv, allergy) {
