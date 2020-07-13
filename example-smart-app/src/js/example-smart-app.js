@@ -24,11 +24,15 @@
          var allergy = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerance'
                   });
-        $.when(pt, obv, allergy).fail(onError);
+        var appointments== smart.patient.api.fetchAll({
+                    type: 'Appointment'
+                  });
+        $.when(pt, obv, allergy, appointments).fail(onError);
 
-        $.when(pt, obv,allergy).done(function(patient, obv, allergy) {
-          console.log(allergy);
-          console.log(obv);
+        $.when(pt, obv,allergy, appointments).done(function(patient, obv, allergy, appointments) {
+          console.log('Allergies',allergy);
+          console.log('Observations', obv);
+          console.log ('Appointments',appointments);
           var byCodes = smart.byCodes(obv, 'code');
            var byObsStatus = smart.byCodes(obv, 'status');
           const statusMap=smart.byCode(obv,'status');
