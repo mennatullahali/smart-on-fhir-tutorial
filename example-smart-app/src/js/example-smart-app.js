@@ -24,7 +24,7 @@
          var allergy = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerance'
                   });
-        var appointments== smart.patient.api.fetchAll({
+        var appointments= smart.patient.api.fetchAll({
                     type: 'Appointment'
                   });
         $.when(pt, obv, allergy, appointments).fail(onError);
